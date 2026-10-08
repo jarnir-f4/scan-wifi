@@ -176,7 +176,7 @@ kelompok2_L3/
 ├── data/
 │   ├── titik_L3.csv
 │   ├── passive_L3_Taqiya.csv
-│   ├── passive_L3_Fikri.csv
+│   ├── passive_L3_Maulana.csv
 │   ├── passive_L3.csv
 │   └── active_L3.csv
 │
@@ -275,12 +275,12 @@ python scan_point.py --titik L3-012 --slot T1 --device laptop-taqiya --out data\
 
 ---
 
-## 10.2 Tim B — Fikri
+## 10.2 Tim B — Maulana
 
 Contoh:
 
 ```bat
-python scan_point.py --titik L3-002 --slot T1 --device laptop-fikri --out data\passive_L3_Fikri.csv --n 3 --ssid "WiFi-UB.x"
+python scan_point.py --titik L3-002 --slot T1 --device laptop-maulana --out data\passive_L3_Maulana.csv --n 3 --ssid "WiFi-UB.x"
 ```
 
 Untuk titik berikutnya, tetap gunakan file output yang sama dan ganti `TITIK_ID`.
@@ -288,7 +288,7 @@ Untuk titik berikutnya, tetap gunakan file output yang sama dan ganti `TITIK_ID`
 Contoh:
 
 ```bat
-python scan_point.py --titik L3-003 --slot T1 --device laptop-fikri --out data\passive_L3_Fikri.csv --n 3 --ssid "WiFi-UB.x"
+python scan_point.py --titik L3-003 --slot T1 --device laptop-maulana --out data\passive_L3_Maulana.csv --n 3 --ssid "WiFi-UB.x"
 ```
 
 ---
@@ -506,7 +506,7 @@ passive_L3_Taqiya.csv
 Tim B:
 
 ```text
-passive_L3_Fikri.csv
+passive_L3_Maulana.csv
 ```
 
 Satu file dapat berisi seluruh titik yang dikerjakan scanner tersebut.
@@ -632,7 +632,7 @@ git push -u origin survey/Taqiya
 
 ```bash
 git switch -c survey/Fikri
-git add data/passive_L3_Fikri.csv
+git add data/passive_L3_Maulana.csv
 git commit -m "data: passive survey Fikri"
 git push -u origin survey/Fikri
 ```
@@ -648,7 +648,7 @@ Setelah survey selesai:
 ```text
 passive_L3_Taqiya.csv
           +
-passive_L3_Fikri.csv
+passive_L3_Maulana.csv
           ↓
     passive_L3.csv
 ```
@@ -659,7 +659,7 @@ Data asli tetap disimpan:
 
 ```text
 passive_L3_Taqiya.csv
-passive_L3_Fikri.csv
+passive_L3_Maulana.csv
 ```
 
 Jangan menghapus raw data setelah merge.
@@ -751,7 +751,7 @@ Sebelum meninggalkan lantai:
 - [ ] Screenshot WiFiAnalyzer tersedia.
 - [ ] Kondisi lingkungan tersedia.
 - [ ] `passive_L3_Taqiya.csv` tersimpan.
-- [ ] `passive_L3_Fikri.csv` tersimpan.
+- [ ] `passive_L3_Maulana.csv` tersimpan.
 - [ ] Tidak ada file CSV yang rusak.
 - [ ] Data telah dibackup.
 - [ ] Data belum diubah secara manual.
