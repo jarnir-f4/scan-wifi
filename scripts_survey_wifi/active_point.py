@@ -15,6 +15,7 @@ import csv
 import json
 import os
 import re
+import socket
 import subprocess
 import sys
 from datetime import datetime
@@ -22,8 +23,25 @@ from datetime import datetime
 OS = os.environ.get("SURVEY_OS", sys.platform)  # "linux" / "win32" / "darwin"
 
 HEADER = ["timestamp", "titik_id", "bssid_assoc", "freq_mhz", "rssi_dbm", "tx_rate_mbps",
-          "rtt_avg_ms", "rtt_max_ms", "jitter_ms", "loss_pct", "down_mbps", "up_mbps", "metode_rtt"]
+          "rtt_avg_ms", "rtt_max_ms", "jitter_ms", "loss_pct", "down_mbps", "up_mbps",
+          "metode_rtt", "device", "scan_ke", "lantai", "catatan"]
 TARGET_DEFAULT = "filkom.ub.ac.id"  # gateway UB tidak membalas ping (ICMP diblokir)
+
+
+def freq_to_channel(f):
+    if 2412 <= f <= 2472:
+        return (f - 2407) // 5
+    if f == 2484:
+        return 14
+    if 5000 < f < 5925:
+        return (f - 5000) // 5
+    if 5955 <= f <= 7115:
+        return (f - 5950) // 5
+    return ""
+
+
+def band_of(f):
+    return "2.4" if f < 3000 else ("5" if f < 5925 else "6")
 
 
 def jalankan(cmd, timeout=60):
@@ -37,6 +55,7 @@ def jalankan(cmd, timeout=60):
 def parse_link(text):
     g = lambda pat, cast=str: (lambda m: cast(m.group(1)) if m else "")(re.search(pat, text))
     return {"bssid": g(r"Connected to ([0-9a-f:]{17})"),
+            "ssid": g(r"SSID:\s*(.+)", str).strip(),
             "freq": g(r"freq:\s*([\d.]+)", lambda v: int(float(v))),
             "rssi": g(r"signal:\s*(-?\d+)", int),
             "tx": g(r"tx bitrate:\s*([\d.]+)", float)}
@@ -107,12 +126,24 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--iface", default="auto", help="interface Wi-Fi Linux (default: deteksi otomatis)")
     p.add_argument("--titik", required=True)
+    p.add_argument("--titik-csv", help="CSV titik ukur (titik_id,lantai,x_px,y_px,...)")
+    p.add_argument("--lantai")
+    p.add_argument("--device", default=socket.gethostname())
+    p.add_argument("--scan-ke", type=int, default=1)
+    p.add_argument("--catatan", default="")
     p.add_argument("--target", default=TARGET_DEFAULT,
                    help="host/IP target latensi (default %s; 'gateway' = gateway otomatis)" % TARGET_DEFAULT)
     p.add_argument("--iperf", help="IP server iperf3 (opsional)")
     p.add_argument("--out", required=True)
     p.add_argument("--rawdir", default="raw/active")
     a = p.parse_args()
+    if a.titik_csv:
+        with open(a.titik_csv, encoding="utf-8-sig") as fh:
+            row = next((r for r in csv.DictReader(fh) if r["titik_id"] == a.titik), None)
+        if row is None:
+            p.error("titik %s tidak ada di %s" % (a.titik, a.titik_csv))
+        a.lantai, a.x, a.y = row.get("lantai", ""), row.get("x_px", ""), row.get("y_px", "")
+    a.lantai = a.lantai or ""
     os.makedirs(a.rawdir, exist_ok=True)
 
     if a.target == "gateway":
@@ -123,7 +154,7 @@ def main():
     if OS == "win32":
         import wlan_win
         link = wlan_win.link()
-        n_ping = 20  # ping Windows tidak punya opsi interval (1 detik/paket)
+        n_ping = 20  
         ping_txt = jalankan(["ping", "-n", str(n_ping), a.target])
     elif OS == "darwin":
         import wlan_mac
@@ -153,13 +184,30 @@ def main():
 
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     new = not os.path.exists(a.out)
+    if os.path.exists(a.out):
+        with open(a.out, "r", newline="", encoding="utf-8") as fh:
+            try:
+                first = next(csv.reader(fh))
+            except StopIteration:
+                first = None
+        if first is not None and first != HEADER:
+            with open(a.out, "w", newline="", encoding="utf-8") as fh:
+                w = csv.writer(fh)
+                w.writerow(HEADER)
+                w.writerow([datetime.now().isoformat(timespec="seconds"), a.titik, link["bssid"],
+                            link["freq"], link["rssi"], link["tx"], pg["avg"], pg["max"],
+                            pg["jitter"], pg["loss"], down, up, metode, a.device, a.scan_ke,
+                            a.lantai, a.catatan])
+            print("[%s] CSV di-reset ke format active yang ringkas + metadata tambahan" % a.titik)
+            raise SystemExit(0)
     with open(a.out, "a", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         if new:
             w.writerow(HEADER)
         w.writerow([datetime.now().isoformat(timespec="seconds"), a.titik, link["bssid"],
                     link["freq"], link["rssi"], link["tx"], pg["avg"], pg["max"],
-                    pg["jitter"], pg["loss"], down, up, metode])
+                    pg["jitter"], pg["loss"], down, up, metode, a.device, a.scan_ke,
+                    a.lantai, a.catatan])
     print("[%s] BSSID %s RSSI %s dBm | RTT %s ms, jitter %s ms, loss %s%% (%s) | down %s / up %s Mbps"
           % (a.titik, link["bssid"], link["rssi"], pg["avg"], pg["jitter"], pg["loss"], metode, down, up))
 
