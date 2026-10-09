@@ -49,15 +49,27 @@ def _keamanan(flags):
 
 
 def _jalankan(hanya_link=False, batas=320):
+    build_script = os.path.join(os.path.dirname(APP), "mac_helper", "build_mac_helper.sh")
     if not os.path.isdir(APP):
-        raise SystemExit("WifiScanMac.app belum ada. Jalankan dulu: sh mac_helper/build_mac_helper.sh")
+        if os.path.exists(build_script):
+            subprocess.run(["sh", build_script], check=False)
+        if not os.path.isdir(APP):
+            raise SystemExit("WifiScanMac.app belum ada. Jalankan dulu: sh mac_helper/build_mac_helper.sh")
     fd, out = tempfile.mkstemp(suffix=".json")
     os.close(fd)
     os.remove(out)
     cmd = ["open", "-W", "-n", APP, "--args", out] + (["--link"] if hanya_link else [])
-    subprocess.run(cmd, timeout=batas, check=False)
+    proc = subprocess.run(cmd, timeout=batas, capture_output=True, text=True, check=False)
     if not os.path.exists(out):
-        raise SystemExit("WifiScanMac tidak menghasilkan data (dialog izin lokasi belum dijawab?)")
+        # Jika gagal (misal binary tidak kompatibel setelah git reset/pull), coba rebuild sekali
+        if os.path.exists(build_script):
+            build_res = subprocess.run(["sh", build_script], capture_output=True, text=True, check=False)
+            if build_res.returncode == 0:
+                subprocess.run(cmd, timeout=batas, check=False)
+        if not os.path.exists(out):
+            if proc.stderr:
+                sys.stderr.write(proc.stderr + "\n")
+            raise SystemExit("WifiScanMac tidak menghasilkan data (dialog izin lokasi belum dijawab?)")
     with open(out, encoding="utf-8") as fh:
         d = json.load(fh)
     os.remove(out)
