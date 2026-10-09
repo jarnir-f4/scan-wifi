@@ -156,41 +156,6 @@ Screenshot menggunakan:
 
 ---
 
-# 6. STRUKTUR FOLDER
-
-Gunakan struktur:
-
-```text
-kelompok2_L3/
-├── README.md
-├── scripts/
-│   ├── scan_point.py
-│   ├── active_point.py
-│   ├── cek_laptop.py
-│   ├── analyze.py
-│   └── ...
-│
-├── denah/
-│   └── denah_L3.png
-│
-├── data/
-│   ├── titik_L3.csv
-│   ├── passive_L3_Taqiya.csv
-│   ├── passive_L3_Maulana.csv
-│   ├── passive_L3.csv
-│   └── active_L3.csv
-│
-├── raw/
-│   └── android/
-│       ├── L3-001.png
-│       ├── L3-002.png
-│       └── ...
-│
-└── output/
-```
-
----
-
 # 7. PERSIAPAN SEBELUM SURVEY
 
 Pastikan:
