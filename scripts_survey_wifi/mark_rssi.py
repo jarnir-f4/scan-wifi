@@ -16,6 +16,11 @@ import os
 
 import matplotlib.pyplot as plt
 
+x_offset = 50
+y_offset = 50
+x_scale = 1.3
+y_scale = 1.3
+
 def process_passive_data(csv_path, target_ssid):
     if not csv_path or not os.path.exists(csv_path):
         return {}
@@ -25,6 +30,10 @@ def process_passive_data(csv_path, target_ssid):
     with open(csv_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
+            band = row.get("band", "").strip()
+            if band != "5":
+                continue
+
             ssid = row.get("ssid", "").strip()
             if ssid != target_ssid:
                 continue
@@ -94,7 +103,7 @@ def main():
         # Plot teks RSSI di posisi y + 50 px
         if labels:
             text_str = "\n".join(labels)
-            ax.text(x, y + 50, text_str, fontsize=7, color="blue", ha="center", va="top")
+            ax.text(x * x_scale + x_offset, y * y_scale + y_offset + 30, text_str, fontsize=7, color="blue", ha="center", va="top")
 
     ax.axis("off")
     fig.savefig(os.path.splitext(a.out)[0] + ".png", dpi=200, bbox_inches="tight")
