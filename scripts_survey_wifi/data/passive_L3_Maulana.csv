@@ -361,115 +361,115 @@ timestamp,lantai,titik_id,x_px,y_px,slot_waktu,device,scan_ke,ssid,bssid,freq_mh
 2026-10-09T07:59:12,,L3-011,,,T1,laptop-maulana,3,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-83.0,-98,,,WPA2/3-Enterprise,no,
 2026-10-09T07:59:12,,L3-011,,,T1,laptop-maulana,3,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-66.0,-78,,,WPA2/3-Enterprise,no,
 2026-10-09T07:59:12,,L3-011,,,T1,laptop-maulana,3,iPhone Asw,c2:99:ab:bd:f4:e6,2437,6,2.4,20,-43.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Recover.Me-183370,c0:c7:0a:58:33:7f,2412,1,2.4,20,-76.0,-84,0,27.5,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-84.0,-100,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,c0:c7:0a:58:3a:c2,2437,6,2.4,20,-77.0,-87,0,32.5,WPA2-Personal,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Vanilish,d2:f3:16:82:51:cd,2462,11,2.4,20,-63.0,-84,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-55.0,-86,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-69.0,-87,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,54:d7:e3:45:4c:80,2437,6,2.4,20,-82.0,-87,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,iPhone,b2:a7:0f:f7:15:51,2437,6,2.4,20,-79.0,-87,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,eduroam,c0:c7:0a:98:3a:c0,5765,153,5,20,-87.0,-97,5,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-81.0,-98,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-84.0,-100,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-81.0,-98,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-84.0,-100,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,eduroam,ec:bd:1d:af:f6:72,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-73.0,-84,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,ec:bd:1d:af:f6:7c,5745,149,5,20,-85.0,-100,0,0.8,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-81.0,-98,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-78.0,-84,,,OWE,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,c0:c7:0a:98:3a:c2,5765,153,5,20,-90.0,-97,0,29.4,WPA2-Personal,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Acen slebew,7e:e5:96:e6:26:7c,2462,11,2.4,20,-59.0,-84,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,iqoo Z9 ,8a:3f:0f:53:ce:1e,2437,6,2.4,20,-62.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-55.0,-84,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-81.0,-98,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,iPhone (2),22:10:bb:35:60:b7,5745,149,5,80,-70.0,-100,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-56.0,-84,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,c0:c7:0a:58:3a:c1,2437,6,2.4,20,-73.0,-82,0,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-56.0,-84,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,FILKOM EVENT,ec:bd:1d:af:f6:73,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,iPhone1,e6:c3:a1:2d:20:a2,5745,149,5,80,-66.0,-100,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,ec:bd:1d:af:f6:70,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-41.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-74.0,-86,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-66.0,-84,,,WPA2-Personal,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,WiFi-UB.x,e8:10:98:82:0b:40,5745,149,5,40,-85.0,-100,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:39,,L3-006,,,T2,laptop-maulana,1,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-31.0,-84,0,35.7,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,ec:bd:1d:af:f6:7f,5745,149,5,20,-90.0,-96,0,0.8,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Recover.Me-183370,c0:c7:0a:58:33:7f,2412,1,2.4,20,-76.0,-84,0,27.5,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-83.0,-96,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,c0:c7:0a:58:3a:c2,2437,6,2.4,20,-77.0,-87,0,32.5,WPA2-Personal,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Vanilish,d2:f3:16:82:51:cd,2462,11,2.4,20,-56.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-69.0,-87,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,54:d7:e3:45:4c:80,2437,6,2.4,20,-75.0,-83,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,iPhone,b2:a7:0f:f7:15:51,2437,6,2.4,20,-79.0,-87,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,eduroam,c0:c7:0a:98:3a:c0,5765,153,5,20,-87.0,-97,5,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-85.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-84.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,eduroam,ec:bd:1d:af:f6:72,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-75.0,-82,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,ec:bd:1d:af:f6:7c,5745,149,5,20,-90.0,-96,0,0.8,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-85.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-70.0,-81,,,OWE,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,c0:c7:0a:98:3a:c2,5765,153,5,20,-90.0,-97,0,29.4,WPA2-Personal,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Acen slebew,7e:e5:96:e6:26:7c,2462,11,2.4,20,-60.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,54:d7:e3:42:97:83,2412,1,2.4,20,-75.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,iqoo Z9 ,8a:3f:0f:53:ce:1e,2437,6,2.4,20,-65.0,-83,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-84.0,-96,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,iPhone (2),22:10:bb:35:60:b7,5745,149,5,80,-71.0,-96,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,c0:c7:0a:58:3a:c1,2437,6,2.4,20,-73.0,-82,0,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-51.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,FILKOM EVENT,ec:bd:1d:af:f6:73,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,iPhone1,e6:c3:a1:2d:20:a2,5745,149,5,80,-67.0,-96,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,ec:bd:1d:af:f6:70,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-47.0,-83,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-74.0,-86,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-64.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,WiFi-UB.x,e8:10:98:82:0b:40,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:44,,L3-006,,,T2,laptop-maulana,2,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-46.0,-82,0,39.6,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,ec:bd:1d:af:f6:7f,5745,149,5,20,-90.0,-96,0,0.8,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Recover.Me-183370,c0:c7:0a:58:33:7f,2412,1,2.4,20,-76.0,-84,0,27.5,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-83.0,-96,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,c0:c7:0a:58:3a:c2,2437,6,2.4,20,-77.0,-87,0,32.5,WPA2-Personal,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Vanilish,d2:f3:16:82:51:cd,2462,11,2.4,20,-56.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-69.0,-87,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:45:4c:80,2437,6,2.4,20,-75.0,-83,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,iPhone,b2:a7:0f:f7:15:51,2437,6,2.4,20,-79.0,-87,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,eduroam,c0:c7:0a:98:3a:c0,5765,153,5,20,-87.0,-97,5,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-85.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-84.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,eduroam,ec:bd:1d:af:f6:72,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-75.0,-82,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,ec:bd:1d:af:f6:7c,5745,149,5,20,-90.0,-96,0,0.8,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-85.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-70.0,-81,,,OWE,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,c0:c7:0a:98:3a:c2,5765,153,5,20,-90.0,-97,0,29.4,WPA2-Personal,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Acen slebew,7e:e5:96:e6:26:7c,2462,11,2.4,20,-60.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,54:d7:e3:42:97:83,2412,1,2.4,20,-75.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,iqoo Z9 ,8a:3f:0f:53:ce:1e,2437,6,2.4,20,-65.0,-83,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-84.0,-96,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,iPhone (2),22:10:bb:35:60:b7,5745,149,5,80,-71.0,-96,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-51.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,c0:c7:0a:58:3a:c1,2437,6,2.4,20,-73.0,-82,0,29.4,WPA2/3-Enterprise,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-51.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,FILKOM EVENT,ec:bd:1d:af:f6:73,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,iPhone1,e6:c3:a1:2d:20:a2,5745,149,5,80,-67.0,-96,,,WPA2/WPA3-Personal,capable,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,ec:bd:1d:af:f6:70,2412,1,2.4,20,-75.0,-84,2,11.8,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-47.0,-83,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-74.0,-86,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-64.0,-82,,,WPA2-Personal,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,WiFi-UB.x,e8:10:98:82:0b:40,5745,149,5,40,-83.0,-96,,,WPA2/3-Enterprise,no,
-2026-10-09T08:29:50,,L3-006,,,T2,laptop-maulana,3,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-46.0,-82,0,39.6,WPA2-Personal,no,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2026-10-09T08:30:42,,L3-005,,,T1,laptop-maulana,1,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-79.0,-99,,,WPA2/3-Enterprise,no,
 2026-10-09T08:30:42,,L3-005,,,T1,laptop-maulana,1,Vanilish,d2:f3:16:82:51:cd,2462,11,2.4,20,-68.0,-85,,,WPA2-Personal,no,
 2026-10-09T08:30:42,,L3-005,,,T1,laptop-maulana,1,eduroam,ec:bd:1d:af:f6:7d,5745,149,5,20,-90.0,-99,0,14.5,WPA2/3-Enterprise,capable,
@@ -735,77 +735,77 @@ timestamp,lantai,titik_id,x_px,y_px,slot_waktu,device,scan_ke,ssid,bssid,freq_mh
 2026-10-09T08:43:18,,L3-010,,,T1,laptop-maulana,3,WiFi-UB.x,e8:10:98:82:0b:40,5745,149,5,40,-83.0,-99,,,WPA2/3-Enterprise,no,
 2026-10-09T08:43:18,,L3-010,,,T1,laptop-maulana,3,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-44.0,-79,,,WPA2/3-Enterprise,no,
 2026-10-09T08:43:18,,L3-010,,,T1,laptop-maulana,3,Vanilish,d2:f3:16:82:51:cd,2462,11,2.4,20,-84.0,-76,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-88.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,FILKOM EVENT,54:d7:e3:42:97:83,2412,1,2.4,20,-56.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-87.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,mpp,3e:90:a0:6c:cd:11,5745,149,5,80,-86.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-70.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-56.0,-81,,,OWE,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,nanadd,4a:94:9a:ef:ad:8a,2412,1,2.4,20,-78.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-69.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-87.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-UB.x,c0:c7:0a:98:34:11,5785,157,5,20,-91.0,-100,12,33.7,WPA2/3-Enterprise,capable,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-71.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-56.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-37.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,eduroam,54:d7:e3:42:97:82,2412,1,2.4,20,-55.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-71.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-89.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,ROBOTIIK,48:22:54:15:73:b2,5785,157,5,80,-90.0,-100,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-70.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-58.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-56.0,-81,0,49.4,WPA2-Personal,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:39,,L3-011,,,T2,laptop-maulana,1,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-56.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-88.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-87.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,FILKOM EVENT,54:d7:e3:42:97:83,2412,1,2.4,20,-56.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,mpp,3e:90:a0:6c:cd:11,5745,149,5,80,-86.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-70.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-56.0,-81,,,OWE,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,nanadd,4a:94:9a:ef:ad:8a,2412,1,2.4,20,-78.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-69.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-87.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-UB.x,c0:c7:0a:98:34:11,5785,157,5,20,-91.0,-100,12,33.7,WPA2/3-Enterprise,capable,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-71.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-56.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-37.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,eduroam,54:d7:e3:42:97:82,2412,1,2.4,20,-55.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-71.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-89.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,ROBOTIIK,48:22:54:15:73:b2,5785,157,5,80,-90.0,-100,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-70.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-58.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-56.0,-81,0,49.4,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,,4a:22:54:75:73:b0,5785,157,5,80,-89.0,-100,,,WPA2-Personal,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:45,,L3-011,,,T2,laptop-maulana,2,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-56.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,eduroam,e8:10:98:82:05:a2,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,iqoo Z9 ,8a:3f:0f:53:ce:1e,2437,6,2.4,20,-75.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,eduroam,e8:10:98:82:0b:42,5745,149,5,40,-86.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-FILKOM,54:d7:e3:45:4c:81,2437,6,2.4,20,-71.0,-79,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,FILKOM EVENT,54:d7:e3:42:97:83,2412,1,2.4,20,-60.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-FILKOM,e8:10:98:82:0b:41,5745,149,5,40,-86.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,mpp,3e:90:a0:6c:cd:11,5745,149,5,80,-89.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,FILKOM EVENT,54:d7:e3:41:42:c3,2462,11,2.4,20,-70.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,ScenXus-b0a73235f7d4,b0:a7:32:35:f7:d5,2422,3,2.4,40,-76.0,-79,,,OWE,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-FILKOM,54:d7:e3:41:42:c1,2462,11,2.4,20,-69.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,FILKOM EVENT,e8:10:98:82:0b:43,5745,149,5,40,-87.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,Sakaguchi,c2:b9:99:8f:6a:a5,2462,11,2.4,20,-71.0,-81,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-FILKOM,54:d7:e3:42:97:81,2412,1,2.4,20,-60.0,-79,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,iPhone Asw,6a:56:bf:c0:98:b9,2437,6,2.4,20,-41.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,eduroam,54:d7:e3:42:97:82,2412,1,2.4,20,-55.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:41:42:c0,2462,11,2.4,20,-71.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,Recover.Me-183370,c0:c7:0a:58:33:7f,2412,1,2.4,20,-78.0,-79,0,27.5,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-FILKOM,e8:10:98:82:05:a1,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,FILKOM EVENT,e8:10:98:82:05:a3,5785,157,5,40,-93.0,-99,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:45:4c:80,2437,6,2.4,20,-71.0,-79,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,eduroam,54:d7:e3:41:42:c2,2462,11,2.4,20,-70.0,-81,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,Q,16:ef:f3:33:ad:62,2412,1,2.4,20,-55.0,-79,,,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,Recover.Me-184350,c0:c7:0a:58:43:5f,2412,1,2.4,20,-60.0,-79,0,51.8,WPA2-Personal,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-UB.x,e8:10:98:82:05:a0,5785,157,5,40,-89.0,-99,,,WPA2/3-Enterprise,no,
-2026-10-09T08:43:50,,L3-011,,,T2,laptop-maulana,3,WiFi-UB.x,54:d7:e3:42:97:80,2412,1,2.4,20,-60.0,-79,,,WPA2/3-Enterprise,no,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
