@@ -1,0 +1,27 @@
+
+Pinging filkom.ub.ac.id.cdn.cloudflare.net [172.66.168.182] with 32 bytes of data:
+Reply from 172.66.168.182: bytes=32 time=28ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=56ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=36ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=34ms TTL=54
+Reply from 172.66.168.182: bytes=32 time=34ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=93ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=38ms TTL=53
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=54
+
+Ping statistics for 172.66.168.182:
+    Packets: Sent = 20, Received = 20, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 28ms, Maximum = 93ms, Average = 35ms
