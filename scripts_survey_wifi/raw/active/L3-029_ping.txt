@@ -1,0 +1,27 @@
+
+Pinging filkom.ub.ac.id.cdn.cloudflare.net [172.66.168.182] with 32 bytes of data:
+Reply from 172.66.168.182: bytes=32 time=34ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=31ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=44ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=29ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=46ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=35ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=247
+Reply from 172.66.168.182: bytes=32 time=30ms TTL=247
+Request timed out.
+Reply from 172.66.168.182: bytes=32 time=32ms TTL=247
+Request timed out.
+Request timed out.
+
+Ping statistics for 172.66.168.182:
+    Packets: Sent = 20, Received = 17, Lost = 3 (15% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 29ms, Maximum = 46ms, Average = 33ms

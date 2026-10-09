@@ -22,11 +22,9 @@ from datetime import datetime
 
 OS = os.environ.get("SURVEY_OS", sys.platform)  # "linux" / "win32" / "darwin"
 
-HEADER = ["timestamp", "lantai", "titik_id", "x_px", "y_px", "slot_waktu", "device",
-          "scan_ke", "ssid", "bssid_assoc", "freq_mhz", "channel", "band", "width_mhz",
-          "rssi_dbm", "noise_dbm", "sta_count", "ch_util_pct", "security", "pmf",
-          "catatan", "tx_rate_mbps", "rtt_avg_ms", "rtt_max_ms", "jitter_ms", "loss_pct",
-          "down_mbps", "up_mbps", "metode_rtt"]
+HEADER = ["timestamp", "titik_id", "bssid_assoc", "freq_mhz", "rssi_dbm", "tx_rate_mbps",
+          "rtt_avg_ms", "rtt_max_ms", "jitter_ms", "loss_pct", "down_mbps", "up_mbps",
+          "metode_rtt", "device", "scan_ke", "lantai", "catatan"]
 TARGET_DEFAULT = "filkom.ub.ac.id"  # gateway UB tidak membalas ping (ICMP diblokir)
 
 
@@ -130,12 +128,8 @@ def main():
     p.add_argument("--titik", required=True)
     p.add_argument("--titik-csv", help="CSV titik ukur (titik_id,lantai,x_px,y_px,...)")
     p.add_argument("--lantai")
-    p.add_argument("--x")
-    p.add_argument("--y")
-    p.add_argument("--slot", default="")
     p.add_argument("--device", default=socket.gethostname())
     p.add_argument("--scan-ke", type=int, default=1)
-    p.add_argument("--ssid")
     p.add_argument("--catatan", default="")
     p.add_argument("--target", default=TARGET_DEFAULT,
                    help="host/IP target latensi (default %s; 'gateway' = gateway otomatis)" % TARGET_DEFAULT)
@@ -150,8 +144,6 @@ def main():
             p.error("titik %s tidak ada di %s" % (a.titik, a.titik_csv))
         a.lantai, a.x, a.y = row.get("lantai", ""), row.get("x_px", ""), row.get("y_px", "")
     a.lantai = a.lantai or ""
-    a.x = a.x or ""
-    a.y = a.y or ""
     os.makedirs(a.rawdir, exist_ok=True)
 
     if a.target == "gateway":
@@ -190,11 +182,6 @@ def main():
             else:
                 up = parse_iperf(js)
 
-    ssid = (a.ssid or link.get("ssid") or "")
-    freq = link.get("freq")
-    channel = freq_to_channel(freq) if freq else ""
-    band = band_of(freq) if freq else ""
-
     os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
     new = not os.path.exists(a.out)
     if os.path.exists(a.out):
@@ -204,29 +191,25 @@ def main():
             except StopIteration:
                 first = None
         if first is not None and first != HEADER:
-            # File lama punya header lama; tetap aman: buat header baru dan ganti file.
-            new = True
             with open(a.out, "w", newline="", encoding="utf-8") as fh:
                 w = csv.writer(fh)
                 w.writerow(HEADER)
-                w.writerow([datetime.now().isoformat(timespec="seconds"), a.lantai, a.titik, a.x, a.y,
-                            a.slot, a.device, a.scan_ke, ssid, link.get("bssid", ""), freq,
-                            channel, band, "", link.get("rssi", ""), "", "", "", "", "",
-                            a.catatan, link.get("tx", ""), pg["avg"], pg["max"], pg["jitter"], pg["loss"],
-                            down, up, metode])
-            print("[%s] CSV diganti header ke format lengkap dengan metadata titik dan jaringan" % a.titik)
+                w.writerow([datetime.now().isoformat(timespec="seconds"), a.titik, link["bssid"],
+                            link["freq"], link["rssi"], link["tx"], pg["avg"], pg["max"],
+                            pg["jitter"], pg["loss"], down, up, metode, a.device, a.scan_ke,
+                            a.lantai, a.catatan])
+            print("[%s] CSV di-reset ke format active yang ringkas + metadata tambahan" % a.titik)
             raise SystemExit(0)
     with open(a.out, "a", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         if new:
             w.writerow(HEADER)
-        w.writerow([datetime.now().isoformat(timespec="seconds"), a.lantai, a.titik, a.x, a.y,
-                    a.slot, a.device, a.scan_ke, ssid, link.get("bssid", ""), freq,
-                    channel, band, "", link.get("rssi", ""), "", "", "", "", "",
-                    a.catatan, link.get("tx", ""), pg["avg"], pg["max"], pg["jitter"], pg["loss"],
-                    down, up, metode])
-    print("[%s] SSID %s | BSSID %s RSSI %s dBm | RTT %s ms, jitter %s ms, loss %s%% (%s) | down %s / up %s Mbps"
-          % (a.titik, ssid or "-", link.get("bssid", "-"), link.get("rssi", ""), pg["avg"], pg["jitter"], pg["loss"], metode, down, up))
+        w.writerow([datetime.now().isoformat(timespec="seconds"), a.titik, link["bssid"],
+                    link["freq"], link["rssi"], link["tx"], pg["avg"], pg["max"],
+                    pg["jitter"], pg["loss"], down, up, metode, a.device, a.scan_ke,
+                    a.lantai, a.catatan])
+    print("[%s] BSSID %s RSSI %s dBm | RTT %s ms, jitter %s ms, loss %s%% (%s) | down %s / up %s Mbps"
+          % (a.titik, link["bssid"], link["rssi"], pg["avg"], pg["jitter"], pg["loss"], metode, down, up))
 
 
 if __name__ == "__main__":
