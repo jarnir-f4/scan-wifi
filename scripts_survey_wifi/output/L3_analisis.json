@@ -1,0 +1,1985 @@
+{
+  "meta": {
+    "dijalankan": "2026-10-11T10:17:16+07:00",
+    "ssid": "WiFi-UB.x",
+    "band_ghz": "5",
+    "prefix_keluaran": "output/L3",
+    "input": {
+      "passive": {
+        "path": "data/passive_L3.csv",
+        "sha256": "74f3a7e13186"
+      },
+      "titik": {
+        "path": "data/titik_L3.csv",
+        "sha256": "194d87082ed6"
+      },
+      "active": {
+        "path": "data/active_L3.csv",
+        "sha256": "189ce0c1f6b6"
+      },
+      "ap_fisik": {
+        "path": "data/ap_fisik_L3.csv",
+        "sha256": "5c6295dd5164"
+      }
+    },
+    "parameter": {
+      "skala_px_per_m": 20.0,
+      "radius_area_lemah_m": 8,
+      "jarak_cocok_ap_m": 10.0,
+      "jarak_ap_jauh_m": 20.0,
+      "jarak_ap_dekat_m": 10.0,
+      "jarak_tetangga_ap_m": 20.0
+    },
+    "ambang": {
+      "rssi_baik": -67,
+      "rssi_lemah": -70,
+      "rssi_kritis": -80,
+      "rssi_sekunder": -75,
+      "cci_rssi": -85,
+      "cci_max": 2,
+      "snr_baik": 25,
+      "snr_buruk": 15,
+      "util_max_pct": 50,
+      "down_min_mbps": 10,
+      "loss_max_pct": 2,
+      "rtt_max_ms": 50,
+      "rtt_spike_ms": 300,
+      "probe_gagal_max_pct": 20,
+      "rssi_std_max_db": 6.0,
+      "ap_tinggi_dbm": -55,
+      "ap_sedang_dbm": -65
+    }
+  },
+  "kualitas_data": {
+    "cakupan_aturan": {
+      "RSSI SSID target": {
+        "kolom": "rssi1",
+        "ada_di_data": true,
+        "titik_terukur": 33,
+        "persen": 100.0,
+        "aktif": true
+      },
+      "AP cadangan": {
+        "kolom": "rssi2",
+        "ada_di_data": true,
+        "titik_terukur": 31,
+        "persen": 93.9,
+        "aktif": true
+      },
+      "SNR": {
+        "kolom": "snr",
+        "ada_di_data": true,
+        "titik_terukur": 10,
+        "persen": 30.3,
+        "aktif": true
+      },
+      "util kanal": {
+        "kolom": "util1",
+        "ada_di_data": true,
+        "titik_terukur": 7,
+        "persen": 21.2,
+        "aktif": true
+      },
+      "throughput": {
+        "kolom": "down_mbps",
+        "ada_di_data": true,
+        "titik_terukur": 0,
+        "persen": 0.0,
+        "aktif": false
+      },
+      "packet loss": {
+        "kolom": "loss_pct",
+        "ada_di_data": true,
+        "titik_terukur": 13,
+        "persen": 39.4,
+        "aktif": true
+      },
+      "latensi": {
+        "kolom": "rtt_ms",
+        "ada_di_data": true,
+        "titik_terukur": 13,
+        "persen": 39.4,
+        "aktif": true
+      },
+      "probe gagal": {
+        "kolom": "probe_gagal_pct",
+        "ada_di_data": true,
+        "titik_terukur": 15,
+        "persen": 45.5,
+        "aktif": true
+      }
+    },
+    "titik_tanpa_uji_aktif": [
+      "L3-027",
+      "L3-028",
+      "L3-013",
+      "L3-034",
+      "L3-033",
+      "L3-032",
+      "L3-031",
+      "L3-024",
+      "L3-020",
+      "L3-017",
+      "L3-018",
+      "L3-021",
+      "L3-023",
+      "L3-012",
+      "L3-026",
+      "L3-005",
+      "L3-010",
+      "L3-003"
+    ],
+    "log": [
+      {
+        "tingkat": "peringatan",
+        "pesan": "titik ada di file titik tetapi tanpa baris passive (tidak dianalisis; belum diukur?): L3-001"
+      },
+      {
+        "tingkat": "peringatan",
+        "pesan": "3 BSSID berpindah kanal di antara sampel (AP reboot/auto-channel?). Kanal yang dilaporkan = yang tersering."
+      },
+      {
+        "tingkat": "info",
+        "pesan": "31 radio memancarkan >1 SSID (BSSID digabung per radio)"
+      },
+      {
+        "tingkat": "info",
+        "pesan": "20 baris active memakai metode non-ICMP (dikeluarkan dari RTT/jitter/loss, dihitung sebagai probe gagal bila RTT kosong)"
+      },
+      {
+        "tingkat": "peringatan",
+        "pesan": "uji aktif memakai >1 perangkat (devCore, LAPTOP-GC8OEJA7); RTT/tx-rate tidak sebanding antar titik"
+      }
+    ]
+  },
+  "langkah_1_cakupan": {
+    "definisi": {
+      "persen_rssi_baik": "RSSI AP terkuat SSID target >= -67 dBm",
+      "persen_status_baik": "status BAIK: lolos semua aturan (RSSI, cadangan, CCI, SNR, aktif)",
+      "blank_spot": "SSID target tidak terdeteksi atau RSSI < -80 dBm"
+    },
+    "jumlah_titik": 33,
+    "persen_rssi_baik": 57.6,
+    "persen_rssi_ge_lemah": 66.7,
+    "persen_blank_spot": 24.2,
+    "persen_ap_cadangan_ok": 48.5,
+    "persen_status_baik": 42.4,
+    "titik_ssid_tidak_terdeteksi": 0,
+    "rssi_median_dbm": -62.4,
+    "rssi_min_dbm": -91.0,
+    "distribusi_status": {
+      "BAIK": 14,
+      "PERHATIAN": 7,
+      "BURUK": 4,
+      "KRITIS": 8
+    },
+    "blank_spot": {
+      "jumlah": 8,
+      "titik": [
+        {
+          "titik_id": "L3-009",
+          "ruang": null,
+          "x_px": 286,
+          "y_px": 539,
+          "rssi1_dbm": -87.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-007",
+          "ruang": null,
+          "x_px": 167,
+          "y_px": 543,
+          "rssi1_dbm": -91.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-008",
+          "ruang": null,
+          "x_px": 71,
+          "y_px": 616,
+          "rssi1_dbm": -85.2,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-011",
+          "ruang": null,
+          "x_px": 357,
+          "y_px": 464,
+          "rssi1_dbm": -81.6,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-004",
+          "ruang": null,
+          "x_px": 281,
+          "y_px": 279,
+          "rssi1_dbm": -90.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-010",
+          "ruang": null,
+          "x_px": 446,
+          "y_px": 541,
+          "rssi1_dbm": -83.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-003",
+          "ruang": null,
+          "x_px": 70,
+          "y_px": 201,
+          "rssi1_dbm": -85.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        },
+        {
+          "titik_id": "L3-002",
+          "ruang": null,
+          "x_px": 163,
+          "y_px": 276,
+          "rssi1_dbm": -85.0,
+          "alasan": "RSSI < -80 dBm",
+          "area": "A2"
+        }
+      ],
+      "per_ruang": null,
+      "catatan": "Kolom 'ruang' tidak ada di file titik; tambahkan kolom tersebut pada --titik agar blank spot dapat dipetakan ke ruangan."
+    }
+  },
+  "langkah_2_pemetaan_ap": {
+    "jumlah_estimasi": 34,
+    "jumlah_di_lantai_ini": 5,
+    "jumlah_mungkin_lantai_lain": 0,
+    "jumlah_keyakinan_rendah": 29,
+    "estimasi": [
+      {
+        "radio": "00:33:58:8e:91:e1",
+        "channel": 44,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -85.0,
+        "titik_terkuat": "L3-012",
+        "n_titik_dipakai": 1,
+        "x_est": 670.0,
+        "y_est": 698.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "00:e6:3a:50:f1:bc",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -89.0,
+        "titik_terkuat": "L3-015",
+        "n_titik_dipakai": 1,
+        "x_est": 1123.0,
+        "y_est": 696.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "00:e6:3a:90:b5:ac",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -88.0,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 1,
+        "x_est": 1218.0,
+        "y_est": 694.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "00:e6:3a:90:eb:0c",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -81.0,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 1,
+        "x_est": 1218.0,
+        "y_est": 694.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "28:b3:71:93:a0:fc",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -85.5,
+        "titik_terkuat": "L3-020",
+        "n_titik_dipakai": 3,
+        "x_est": 829.13,
+        "y_est": 90.65,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "28:b3:71:ab:d3:91",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -86.9,
+        "titik_terkuat": "L3-022",
+        "n_titik_dipakai": 2,
+        "x_est": 712.12,
+        "y_est": 591.85,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "28:b3:71:ab:f8:d1",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -86.2,
+        "titik_terkuat": "L3-005",
+        "n_titik_dipakai": 2,
+        "x_est": 534.05,
+        "y_est": 213.1,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "2c:ab:46:be:09:32",
+        "channel": 157,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -82.0,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 1,
+        "x_est": 1218.0,
+        "y_est": 694.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "34:8f:27:44:98:ac",
+        "channel": 157,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -84.2,
+        "titik_terkuat": "L3-025",
+        "n_titik_dipakai": 2,
+        "x_est": 974.41,
+        "y_est": 315.11,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "34:8f:27:84:7c:9c",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -78.9,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 2,
+        "x_est": 1195.87,
+        "y_est": 665.36,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "3c:46:a1:b9:ba:e2",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -82.8,
+        "titik_terkuat": "L3-030",
+        "n_titik_dipakai": 1,
+        "x_est": 1001.0,
+        "y_est": 401.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "3c:46:a1:bb:cd:92",
+        "channel": 153,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -77.0,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 2,
+        "x_est": 1210.18,
+        "y_est": 694.16,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "54:d7:e3:41:42:d0",
+        "channel": 56,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -85.3,
+        "titik_terkuat": "L3-033",
+        "n_titik_dipakai": 2,
+        "x_est": 628.6,
+        "y_est": 256.54,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "54:d7:e3:42:42:d0",
+        "channel": 52,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -46.0,
+        "titik_terkuat": "L3-019",
+        "n_titik_dipakai": 3,
+        "x_est": 948.23,
+        "y_est": 165.33,
+        "keyakinan": "tinggi",
+        "penanda_peta": "▲ (di lantai ini)"
+      },
+      {
+        "radio": "54:d7:e3:42:97:90",
+        "channel": 36,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -79.3,
+        "titik_terkuat": "L3-034",
+        "n_titik_dipakai": 3,
+        "x_est": 633.44,
+        "y_est": 529.72,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "54:d7:e3:45:4c:90",
+        "channel": 60,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -86.9,
+        "titik_terkuat": "L3-033",
+        "n_titik_dipakai": 1,
+        "x_est": 608.0,
+        "y_est": 347.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "80:03:84:19:07:3c",
+        "channel": 157,
+        "lebar_mhz": 80,
+        "rssi_maks_dbm": -93.0,
+        "titik_terkuat": "L3-013",
+        "n_titik_dipakai": 1,
+        "x_est": 881.0,
+        "y_est": 701.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "94:b3:4f:bc:cb:81",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -91.0,
+        "titik_terkuat": "L3-033",
+        "n_titik_dipakai": 1,
+        "x_est": 608.0,
+        "y_est": 347.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "b4:79:c8:ae:45:dc",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -82.5,
+        "titik_terkuat": "L3-016",
+        "n_titik_dipakai": 2,
+        "x_est": 1197.22,
+        "y_est": 694.44,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:34:11",
+        "channel": 157,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -78.0,
+        "titik_terkuat": "L3-034",
+        "n_titik_dipakai": 2,
+        "x_est": 627.88,
+        "y_est": 581.95,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:34:d1",
+        "channel": 149,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -82.0,
+        "titik_terkuat": "L3-018",
+        "n_titik_dipakai": 1,
+        "x_est": 1072.0,
+        "y_est": 85.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:35:01",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -89.0,
+        "titik_terkuat": "L3-013",
+        "n_titik_dipakai": 1,
+        "x_est": 881.0,
+        "y_est": 701.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:38:b1",
+        "channel": 44,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -69.0,
+        "titik_terkuat": "L3-015",
+        "n_titik_dipakai": 3,
+        "x_est": 1098.76,
+        "y_est": 695.2,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:52",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -74.6,
+        "titik_terkuat": "L3-018",
+        "n_titik_dipakai": 2,
+        "x_est": 1068.3,
+        "y_est": 86.09,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:a1",
+        "channel": 36,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -83.9,
+        "titik_terkuat": "L3-020",
+        "n_titik_dipakai": 1,
+        "x_est": 789.0,
+        "y_est": 60.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:c1",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -70.0,
+        "titik_terkuat": "L3-005",
+        "n_titik_dipakai": 3,
+        "x_est": 457.61,
+        "y_est": 267.35,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "c8:a6:08:8b:1e:a1",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -85.0,
+        "titik_terkuat": "L3-002",
+        "n_titik_dipakai": 2,
+        "x_est": 116.5,
+        "y_est": 238.5,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "e8:10:98:82:05:a0",
+        "channel": 157,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -49.2,
+        "titik_terkuat": "L3-024",
+        "n_titik_dipakai": 3,
+        "x_est": 778.78,
+        "y_est": 300.72,
+        "keyakinan": "tinggi",
+        "penanda_peta": "▲ (di lantai ini)"
+      },
+      {
+        "radio": "e8:10:98:82:0b:20",
+        "channel": 48,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -45.0,
+        "titik_terkuat": "L3-022",
+        "n_titik_dipakai": 3,
+        "x_est": 711.02,
+        "y_est": 530.7,
+        "keyakinan": "tinggi",
+        "penanda_peta": "▲ (di lantai ini)"
+      },
+      {
+        "radio": "e8:10:98:82:0b:40",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -48.2,
+        "titik_terkuat": "L3-022",
+        "n_titik_dipakai": 3,
+        "x_est": 725.14,
+        "y_est": 517.95,
+        "keyakinan": "tinggi",
+        "penanda_peta": "▲ (di lantai ini)"
+      },
+      {
+        "radio": "ec:bd:1d:af:f6:7f",
+        "channel": 149,
+        "lebar_mhz": 20,
+        "rssi_maks_dbm": -87.0,
+        "titik_terkuat": "L3-021",
+        "n_titik_dipakai": 1,
+        "x_est": 659.0,
+        "y_est": 123.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "f0:6f:ce:43:1e:2c",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -86.0,
+        "titik_terkuat": "L3-025",
+        "n_titik_dipakai": 1,
+        "x_est": 925.0,
+        "y_est": 328.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "fc:5c:45:08:6f:7c",
+        "channel": 153,
+        "lebar_mhz": 80,
+        "rssi_maks_dbm": -90.0,
+        "titik_terkuat": "L3-014",
+        "n_titik_dipakai": 1,
+        "x_est": 1030.0,
+        "y_est": 724.0,
+        "keyakinan": "rendah (lantai/area lain)",
+        "penanda_peta": "tidak digambar (keyakinan rendah)"
+      },
+      {
+        "radio": "fc:7f:f1:dd:53:30",
+        "channel": 64,
+        "lebar_mhz": 40,
+        "rssi_maks_dbm": -38.6,
+        "titik_terkuat": "L3-029",
+        "n_titik_dipakai": 3,
+        "x_est": 1058.1,
+        "y_est": 297.41,
+        "keyakinan": "tinggi",
+        "penanda_peta": "▲ (di lantai ini)"
+      }
+    ],
+    "perbandingan_dengan_fisik": {
+      "jarak_cocok_m": 10.0,
+      "jumlah_fisik": 9,
+      "jumlah_fisik_cocok": 8,
+      "jumlah_fisik_tanpa_estimasi": 1,
+      "jumlah_estimasi_tanpa_fisik": 2,
+      "fisik": [
+        {
+          "ap_id": "AP-L3-01",
+          "x_px": 180,
+          "y_px": 275,
+          "estimasi_terdekat": "c8:a6:08:8b:1e:a1",
+          "jarak_m": 3.66,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-02",
+          "x_px": 475,
+          "y_px": 275,
+          "estimasi_terdekat": "c0:c7:0a:98:3a:c1",
+          "jarak_m": 0.95,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-03",
+          "x_px": 180,
+          "y_px": 538,
+          "estimasi_terdekat": "c8:a6:08:8b:1e:a1",
+          "jarak_m": 15.31,
+          "cocok": false,
+          "interpretasi": "AP fisik tanpa ▲ di dekatnya: kemungkinan AP mati, memakai SSID lain, atau hanya memancarkan 2,4 GHz"
+        },
+        {
+          "ap_id": "AP-L3-04",
+          "x_px": 470,
+          "y_px": 541,
+          "estimasi_terdekat": "c0:c7:0a:98:34:11",
+          "jarak_m": 8.16,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-05",
+          "x_px": 1010,
+          "y_px": 723,
+          "estimasi_terdekat": "fc:5c:45:08:6f:7c",
+          "jarak_m": 1.0,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-06",
+          "x_px": 968,
+          "y_px": 122,
+          "estimasi_terdekat": "54:d7:e3:42:42:d0",
+          "jarak_m": 2.38,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-07",
+          "x_px": 722,
+          "y_px": 514,
+          "estimasi_terdekat": "e8:10:98:82:0b:40",
+          "jarak_m": 0.25,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-08",
+          "x_px": 1090,
+          "y_px": 544,
+          "estimasi_terdekat": "c0:c7:0a:98:38:b1",
+          "jarak_m": 7.57,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        },
+        {
+          "ap_id": "AP-L3-09",
+          "x_px": 1062,
+          "y_px": 262,
+          "estimasi_terdekat": "fc:7f:f1:dd:53:30",
+          "jarak_m": 1.78,
+          "cocok": true,
+          "interpretasi": "cocok dengan estimasi ▲/△"
+        }
+      ],
+      "estimasi_tanpa_fisik": [
+        {
+          "radio": "e8:10:98:82:05:a0",
+          "penanda_peta": "▲ (di lantai ini)",
+          "fisik_terdekat": "AP-L3-07",
+          "jarak_fisik_terdekat_m": 11.04,
+          "interpretasi": "▲ tanpa □: kemungkinan AP tersembunyi di dalam ruangan (tidak tercatat pada observasi fisik); bisa juga berasal dari lantai lain"
+        },
+        {
+          "radio": "ec:bd:1d:af:f6:7f",
+          "penanda_peta": "tidak digambar (keyakinan rendah)",
+          "fisik_terdekat": "AP-L3-02",
+          "jarak_fisik_terdekat_m": 11.93,
+          "interpretasi": "keyakinan rendah (RSSI maks < -65 dBm): kemungkinan AP berada di lantai/area lain"
+        }
+      ]
+    }
+  },
+  "langkah_3_kanal": {
+    "jumlah_radio_ssid_target": 34,
+    "radio": [
+      {
+        "radio": "00:33:58:8e:91:e1",
+        "channel": 44,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          44
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "00:e6:3a:50:f1:bc",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          48
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "00:e6:3a:90:b5:ac",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          40
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "00:e6:3a:90:eb:0c",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "28:b3:71:93:a0:fc",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          48
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "28:b3:71:ab:d3:91",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          40
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "28:b3:71:ab:f8:d1",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "2c:ab:46:be:09:32",
+        "channel": 157,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          157,
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "34:8f:27:44:98:ac",
+        "channel": 157,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          157
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "34:8f:27:84:7c:9c",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "3c:46:a1:b9:ba:e2",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "3c:46:a1:bb:cd:92",
+        "channel": 153,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "54:d7:e3:41:42:d0",
+        "channel": 56,
+        "lebar_mhz": 40,
+        "dfs": true,
+        "kanal_diduduki": [
+          52,
+          56
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "54:d7:e3:42:42:d0",
+        "channel": 52,
+        "lebar_mhz": 40,
+        "dfs": true,
+        "kanal_diduduki": [
+          52,
+          56
+        ],
+        "keyakinan": "tinggi"
+      },
+      {
+        "radio": "54:d7:e3:42:97:90",
+        "channel": 36,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          36,
+          40
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "54:d7:e3:45:4c:90",
+        "channel": 60,
+        "lebar_mhz": 40,
+        "dfs": true,
+        "kanal_diduduki": [
+          60,
+          64
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "80:03:84:19:07:3c",
+        "channel": 157,
+        "lebar_mhz": 80,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153,
+          157,
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "94:b3:4f:bc:cb:81",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          48
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "b4:79:c8:ae:45:dc",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:34:11",
+        "channel": 157,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          157
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:34:d1",
+        "channel": 149,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          149
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:35:01",
+        "channel": 40,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          40
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:38:b1",
+        "channel": 44,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          44
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:52",
+        "channel": 48,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          48
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:a1",
+        "channel": 36,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          36
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c0:c7:0a:98:3a:c1",
+        "channel": 153,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "c8:a6:08:8b:1e:a1",
+        "channel": 161,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "e8:10:98:82:05:a0",
+        "channel": 157,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          157,
+          161
+        ],
+        "keyakinan": "tinggi"
+      },
+      {
+        "radio": "e8:10:98:82:0b:20",
+        "channel": 48,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          44,
+          48
+        ],
+        "keyakinan": "tinggi"
+      },
+      {
+        "radio": "e8:10:98:82:0b:40",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153
+        ],
+        "keyakinan": "tinggi"
+      },
+      {
+        "radio": "ec:bd:1d:af:f6:7f",
+        "channel": 149,
+        "lebar_mhz": 20,
+        "dfs": false,
+        "kanal_diduduki": [
+          149
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "f0:6f:ce:43:1e:2c",
+        "channel": 149,
+        "lebar_mhz": 40,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "fc:5c:45:08:6f:7c",
+        "channel": 153,
+        "lebar_mhz": 80,
+        "dfs": false,
+        "kanal_diduduki": [
+          149,
+          153,
+          157,
+          161
+        ],
+        "keyakinan": "rendah (lantai/area lain)"
+      },
+      {
+        "radio": "fc:7f:f1:dd:53:30",
+        "channel": 64,
+        "lebar_mhz": 40,
+        "dfs": true,
+        "kanal_diduduki": [
+          60,
+          64
+        ],
+        "keyakinan": "tinggi"
+      }
+    ],
+    "lebar_kanal_mhz": {
+      "20": 20,
+      "40": 12,
+      "80": 2
+    },
+    "dfs": {
+      "jumlah_radio": 4,
+      "persen": 11.8,
+      "dimanfaatkan": true,
+      "rentang_kanal": "52-144"
+    },
+    "distribusi_kanal": {
+      "36": {
+        "ssid_kampus": 2,
+        "lainnya": 1
+      },
+      "40": {
+        "ssid_kampus": 3,
+        "lainnya": 1
+      },
+      "44": {
+        "ssid_kampus": 2,
+        "lainnya": 1
+      },
+      "48": {
+        "ssid_kampus": 5,
+        "lainnya": 2
+      },
+      "52": {
+        "ssid_kampus": 1,
+        "lainnya": 1
+      },
+      "56": {
+        "ssid_kampus": 1,
+        "lainnya": 0
+      },
+      "60": {
+        "ssid_kampus": 1,
+        "lainnya": 1
+      },
+      "64": {
+        "ssid_kampus": 1,
+        "lainnya": 0
+      },
+      "149": {
+        "ssid_kampus": 5,
+        "lainnya": 7
+      },
+      "153": {
+        "ssid_kampus": 5,
+        "lainnya": 2
+      },
+      "157": {
+        "ssid_kampus": 5,
+        "lainnya": 8
+      },
+      "161": {
+        "ssid_kampus": 3,
+        "lainnya": 1
+      }
+    },
+    "ap_bertetangga": {
+      "jarak_maks_m": 20.0,
+      "hanya_radio_dengan_rssi_maks_dbm_ge": -65,
+      "jumlah_pasangan": 7,
+      "ada_kanal_beririsan": false,
+      "pasangan_kanal_beririsan": []
+    },
+    "titik_cci_tinggi": [
+      {
+        "titik_id": "L3-013",
+        "ruang": null,
+        "kanal": 149,
+        "cci": 3
+      },
+      {
+        "titik_id": "L3-011",
+        "ruang": null,
+        "kanal": 157,
+        "cci": 3
+      }
+    ]
+  },
+  "langkah_4_area_lemah": [
+    {
+      "area": "A1",
+      "titik": [
+        "L3-016",
+        "L3-014",
+        "L3-015"
+      ],
+      "jumlah_titik": 3,
+      "ruang": null,
+      "x_px": 1123.67,
+      "y_px": 704.67,
+      "rssi_rata_dbm": -72.1,
+      "status_terburuk": "BURUK",
+      "penyebab_dominan_skrip": "cakupan lemah",
+      "jarak_ap_terdekat_m": {
+        "median": 20.19,
+        "min": 18.4,
+        "maks": 21.38
+      },
+      "ap_terdekat_dari_pusat": {
+        "radio": "fc:7f:f1:dd:53:30",
+        "jarak_m": 20.62
+      },
+      "penyebab_utama": "Tidak ada AP cadangan memadai untuk roaming",
+      "diagnosis": [
+        {
+          "kode": "tanpa_cadangan",
+          "penyebab": "Tidak ada AP cadangan memadai untuk roaming",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-016",
+            "L3-014",
+            "L3-015"
+          ],
+          "anggota_terkena": 3,
+          "dari": 3,
+          "dominan": true,
+          "tindakan": "Tambah AP agar ada tumpang tindih >= -75 dBm."
+        },
+        {
+          "kode": "kinerja_aktif",
+          "penyebab": "Uji aktif bermasalah (throughput, packet loss, latensi, atau probe gagal)",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-016",
+            "L3-014",
+            "L3-015"
+          ],
+          "anggota_terkena": 3,
+          "dari": 3,
+          "dominan": true,
+          "tindakan": "Telusuri penyebabnya per titik (lihat detail): CCI, beban kanal, atau roaming.",
+          "detail": {
+            "L3-016": [
+              "probe gagal",
+              "latensi tinggi",
+              "lonjakan latensi"
+            ],
+            "L3-014": [
+              "probe gagal"
+            ],
+            "L3-015": [
+              "probe gagal"
+            ]
+          }
+        },
+        {
+          "kode": "bocor_lantai_lain",
+          "penyebab": "Sinyal terkuat berasal dari AP yang kemungkinan berada di lantai lain",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-014",
+            "L3-015"
+          ],
+          "anggota_terkena": 2,
+          "dari": 3,
+          "dominan": true,
+          "tindakan": "Tambah AP di lantai ini; sinyal yang diterima tidak berasal dari lantai ini."
+        },
+        {
+          "kode": "roaming_tidak_stabil",
+          "penyebab": "Klien berpindah AP saat uji statis (asosiasi tidak stabil)",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-016",
+            "L3-014"
+          ],
+          "anggota_terkena": 2,
+          "dari": 3,
+          "dominan": true,
+          "tindakan": "Periksa tumpang tindih sel antar-AP dan keseimbangan daya; hindari titik di batas sel."
+        },
+        {
+          "kode": "jauh_dari_ap",
+          "penyebab": "Jauh dari AP terdekat di lantai ini",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-016"
+          ],
+          "anggota_terkena": 1,
+          "dari": 3,
+          "dominan": false,
+          "tindakan": "Tambah atau relokasi AP agar mendekati area ini."
+        },
+        {
+          "kode": "jarak_sedang",
+          "penyebab": "Jarak sedang dari AP; pengaruh jarak dan penghalang tidak terpisahkan dari data RSSI",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-014"
+          ],
+          "anggota_terkena": 1,
+          "dari": 3,
+          "dominan": false,
+          "tindakan": "Survei ulang dengan titik lebih rapat atau uji dengan AP sementara."
+        }
+      ]
+    },
+    {
+      "area": "A2",
+      "titik": [
+        "L3-009",
+        "L3-007",
+        "L3-008",
+        "L3-006",
+        "L3-011",
+        "L3-004",
+        "L3-010",
+        "L3-003",
+        "L3-002"
+      ],
+      "jumlah_titik": 9,
+      "ruang": null,
+      "x_px": 244.44,
+      "y_px": 423.56,
+      "rssi_rata_dbm": -85.0,
+      "status_terburuk": "KRITIS",
+      "penyebab_dominan_skrip": "blank spot",
+      "jarak_ap_terdekat_m": {
+        "median": 24.91,
+        "min": 13.26,
+        "maks": 35.79
+      },
+      "ap_terdekat_dari_pusat": {
+        "radio": "e8:10:98:82:0b:20",
+        "jarak_m": 23.94
+      },
+      "penyebab_utama": "Tidak ada AP cadangan memadai untuk roaming",
+      "diagnosis": [
+        {
+          "kode": "tanpa_cadangan",
+          "penyebab": "Tidak ada AP cadangan memadai untuk roaming",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-009",
+            "L3-007",
+            "L3-008",
+            "L3-006",
+            "L3-011",
+            "L3-004",
+            "L3-010",
+            "L3-003",
+            "L3-002"
+          ],
+          "anggota_terkena": 9,
+          "dari": 9,
+          "dominan": true,
+          "tindakan": "Tambah AP agar ada tumpang tindih >= -75 dBm."
+        },
+        {
+          "kode": "jauh_dari_ap",
+          "penyebab": "Jauh dari AP terdekat di lantai ini",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-009",
+            "L3-007",
+            "L3-008",
+            "L3-004",
+            "L3-003",
+            "L3-002"
+          ],
+          "anggota_terkena": 6,
+          "dari": 9,
+          "dominan": true,
+          "tindakan": "Tambah atau relokasi AP agar mendekati area ini."
+        },
+        {
+          "kode": "snr_rendah",
+          "penyebab": "SNR rendah (noise atau interferensi non-Wi-Fi)",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-009",
+            "L3-007",
+            "L3-008",
+            "L3-004",
+            "L3-003",
+            "L3-002"
+          ],
+          "anggota_terkena": 6,
+          "dari": 9,
+          "dominan": true,
+          "tindakan": "Cari sumber noise; evaluasi kanal dan daya AP."
+        },
+        {
+          "kode": "bocor_lantai_lain",
+          "penyebab": "Sinyal terkuat berasal dari AP yang kemungkinan berada di lantai lain",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-008",
+            "L3-004",
+            "L3-003",
+            "L3-002"
+          ],
+          "anggota_terkena": 4,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Tambah AP di lantai ini; sinyal yang diterima tidak berasal dari lantai ini."
+        },
+        {
+          "kode": "jarak_sedang",
+          "penyebab": "Jarak sedang dari AP; pengaruh jarak dan penghalang tidak terpisahkan dari data RSSI",
+          "jenis_bukti": "inferensi",
+          "titik": [
+            "L3-006",
+            "L3-011",
+            "L3-010"
+          ],
+          "anggota_terkena": 3,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Survei ulang dengan titik lebih rapat atau uji dengan AP sementara."
+        },
+        {
+          "kode": "roaming_tidak_stabil",
+          "penyebab": "Klien berpindah AP saat uji statis (asosiasi tidak stabil)",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-009",
+            "L3-006",
+            "L3-011"
+          ],
+          "anggota_terkena": 3,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Periksa tumpang tindih sel antar-AP dan keseimbangan daya; hindari titik di batas sel."
+        },
+        {
+          "kode": "kinerja_aktif",
+          "penyebab": "Uji aktif bermasalah (throughput, packet loss, latensi, atau probe gagal)",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-006",
+            "L3-011"
+          ],
+          "anggota_terkena": 2,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Telusuri penyebabnya per titik (lihat detail): CCI, beban kanal, atau roaming.",
+          "detail": {
+            "L3-006": [
+              "packet loss",
+              "probe gagal",
+              "lonjakan latensi"
+            ],
+            "L3-011": [
+              "packet loss",
+              "probe gagal",
+              "latensi tinggi"
+            ]
+          }
+        },
+        {
+          "kode": "cci",
+          "penyebab": "Co-channel interference",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-011"
+          ],
+          "anggota_terkena": 1,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Susun ulang channel plan; kurangi lebar kanal."
+        },
+        {
+          "kode": "beban",
+          "penyebab": "Kanal padat / beban tinggi",
+          "jenis_bukti": "terukur",
+          "titik": [
+            "L3-008"
+          ],
+          "anggota_terkena": 1,
+          "dari": 9,
+          "dominan": false,
+          "tindakan": "Tambah kapasitas (AP/radio) atau kurangi lebar kanal; pertimbangkan band steering."
+        }
+      ]
+    }
+  ],
+  "langkah_5_verifikasi_aktif": {
+    "tersedia": true,
+    "ringkasan": {
+      "titik_diuji": 15,
+      "titik_tanpa_uji": 18,
+      "titik_rssi_buruk_diuji": 9,
+      "titik_rssi_buruk_terkonfirmasi_aktif": 4,
+      "persen_terkonfirmasi": 44.4,
+      "titik_rssi_bagus_tetapi_bermasalah": 1
+    },
+    "metrik_tersedia": {
+      "down_mbps": false,
+      "rtt_ms": true,
+      "rtt_maks_ms": true,
+      "jitter_ms": true,
+      "loss_pct": true,
+      "probe_gagal_pct": true
+    },
+    "titik_rssi_buruk_diuji": [
+      {
+        "titik_id": "L3-016",
+        "ruang": null,
+        "rssi1_dbm": -72.4,
+        "status": "BURUK",
+        "n_scan_active": 7,
+        "down_mbps": null,
+        "rtt_ms": 113.55,
+        "rtt_maks_ms": 1386.0,
+        "jitter_ms": 161.16,
+        "loss_pct": 0.0,
+        "probe_gagal_pct": 42.86,
+        "masalah_aktif": [
+          "probe gagal",
+          "latensi tinggi",
+          "lonjakan latensi"
+        ],
+        "terkonfirmasi": true
+      },
+      {
+        "titik_id": "L3-014",
+        "ruang": null,
+        "rssi1_dbm": -75.0,
+        "status": "BURUK",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": null,
+        "rtt_maks_ms": null,
+        "jitter_ms": null,
+        "loss_pct": null,
+        "probe_gagal_pct": 100.0,
+        "masalah_aktif": [
+          "probe gagal"
+        ],
+        "terkonfirmasi": true
+      },
+      {
+        "titik_id": "L3-009",
+        "ruang": null,
+        "rssi1_dbm": -87.0,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 32.47,
+        "rtt_maks_ms": 138.0,
+        "jitter_ms": 4.65,
+        "loss_pct": 0.4,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [],
+        "terkonfirmasi": false
+      },
+      {
+        "titik_id": "L3-007",
+        "ruang": null,
+        "rssi1_dbm": -91.0,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 32.63,
+        "rtt_maks_ms": 142.0,
+        "jitter_ms": 4.1,
+        "loss_pct": 0.0,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [],
+        "terkonfirmasi": false
+      },
+      {
+        "titik_id": "L3-008",
+        "ruang": null,
+        "rssi1_dbm": -85.2,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 31.69,
+        "rtt_maks_ms": 64.4,
+        "jitter_ms": 3.53,
+        "loss_pct": 0.0,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [],
+        "terkonfirmasi": false
+      },
+      {
+        "titik_id": "L3-006",
+        "ruang": null,
+        "rssi1_dbm": -77.0,
+        "status": "BURUK",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 31.84,
+        "rtt_maks_ms": 632.0,
+        "jitter_ms": 3.68,
+        "loss_pct": 31.0,
+        "probe_gagal_pct": 20.0,
+        "masalah_aktif": [
+          "packet loss",
+          "probe gagal",
+          "lonjakan latensi"
+        ],
+        "terkonfirmasi": true
+      },
+      {
+        "titik_id": "L3-011",
+        "ruang": null,
+        "rssi1_dbm": -81.6,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 79.88,
+        "rtt_maks_ms": 259.0,
+        "jitter_ms": 58.24,
+        "loss_pct": 42.0,
+        "probe_gagal_pct": 60.0,
+        "masalah_aktif": [
+          "packet loss",
+          "probe gagal",
+          "latensi tinggi"
+        ],
+        "terkonfirmasi": true
+      },
+      {
+        "titik_id": "L3-004",
+        "ruang": null,
+        "rssi1_dbm": -90.0,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 33.36,
+        "rtt_maks_ms": 66.8,
+        "jitter_ms": 5.01,
+        "loss_pct": 0.0,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [],
+        "terkonfirmasi": false
+      },
+      {
+        "titik_id": "L3-002",
+        "ruang": null,
+        "rssi1_dbm": -85.0,
+        "status": "KRITIS",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 32.25,
+        "rtt_maks_ms": 49.5,
+        "jitter_ms": 2.7,
+        "loss_pct": 0.0,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [],
+        "terkonfirmasi": false
+      }
+    ],
+    "titik_rssi_buruk_tanpa_uji": [
+      "L3-010",
+      "L3-003"
+    ],
+    "rssi_bagus_tetapi_lambat": [
+      {
+        "titik_id": "L3-022",
+        "ruang": null,
+        "rssi1_dbm": -45.0,
+        "status": "PERHATIAN",
+        "n_scan_active": 5,
+        "down_mbps": null,
+        "rtt_ms": 37.2,
+        "rtt_maks_ms": 334.0,
+        "jitter_ms": 8.58,
+        "loss_pct": 1.0,
+        "probe_gagal_pct": 0.0,
+        "masalah_aktif": [
+          "lonjakan latensi"
+        ]
+      }
+    ],
+    "catatan": "'RSSI buruk' = SSID tidak terdeteksi atau RSSI < -70 dBm (status tidak dipakai agar tidak sirkular). 'Lambat/bermasalah' = throughput, packet loss, probe gagal, latensi, atau lonjakan latensi melewati ambang."
+  },
+  "langkah_6_roaming": {
+    "cadangan_ap": {
+      "ambang_dbm": -75,
+      "jumlah_titik_tanpa_cadangan": 17,
+      "persen": 51.5,
+      "titik": [
+        {
+          "titik_id": "L3-027",
+          "ruang": null,
+          "x_px": 1082,
+          "y_px": 518,
+          "rssi1_dbm": -68.0,
+          "rssi2_dbm": -77.0
+        },
+        {
+          "titik_id": "L3-032",
+          "ruang": null,
+          "x_px": 602,
+          "y_px": 257,
+          "rssi1_dbm": -64.2,
+          "rssi2_dbm": -81.0
+        },
+        {
+          "titik_id": "L3-031",
+          "ruang": null,
+          "x_px": 600,
+          "y_px": 214,
+          "rssi1_dbm": -63.8,
+          "rssi2_dbm": -80.2
+        },
+        {
+          "titik_id": "L3-029",
+          "ruang": null,
+          "x_px": 1063,
+          "y_px": 292,
+          "rssi1_dbm": -38.6,
+          "rssi2_dbm": -76.2
+        },
+        {
+          "titik_id": "L3-016",
+          "ruang": null,
+          "x_px": 1218,
+          "y_px": 694,
+          "rssi1_dbm": -72.4,
+          "rssi2_dbm": -77.0
+        },
+        {
+          "titik_id": "L3-014",
+          "ruang": null,
+          "x_px": 1030,
+          "y_px": 724,
+          "rssi1_dbm": -75.0,
+          "rssi2_dbm": -76.6
+        },
+        {
+          "titik_id": "L3-015",
+          "ruang": null,
+          "x_px": 1123,
+          "y_px": 696,
+          "rssi1_dbm": -69.0,
+          "rssi2_dbm": -82.6
+        },
+        {
+          "titik_id": "L3-009",
+          "ruang": null,
+          "x_px": 286,
+          "y_px": 539,
+          "rssi1_dbm": -87.0,
+          "rssi2_dbm": -88.0
+        },
+        {
+          "titik_id": "L3-007",
+          "ruang": null,
+          "x_px": 167,
+          "y_px": 543,
+          "rssi1_dbm": -91.0,
+          "rssi2_dbm": null
+        },
+        {
+          "titik_id": "L3-008",
+          "ruang": null,
+          "x_px": 71,
+          "y_px": 616,
+          "rssi1_dbm": -85.2,
+          "rssi2_dbm": -89.0
+        },
+        {
+          "titik_id": "L3-006",
+          "ruang": null,
+          "x_px": 359,
+          "y_px": 353,
+          "rssi1_dbm": -77.0,
+          "rssi2_dbm": -77.0
+        },
+        {
+          "titik_id": "L3-011",
+          "ruang": null,
+          "x_px": 357,
+          "y_px": 464,
+          "rssi1_dbm": -81.6,
+          "rssi2_dbm": -81.6
+        },
+        {
+          "titik_id": "L3-005",
+          "ruang": null,
+          "x_px": 451,
+          "y_px": 273,
+          "rssi1_dbm": -70.0,
+          "rssi2_dbm": -77.8
+        },
+        {
+          "titik_id": "L3-004",
+          "ruang": null,
+          "x_px": 281,
+          "y_px": 279,
+          "rssi1_dbm": -90.0,
+          "rssi2_dbm": -91.0
+        },
+        {
+          "titik_id": "L3-010",
+          "ruang": null,
+          "x_px": 446,
+          "y_px": 541,
+          "rssi1_dbm": -83.0,
+          "rssi2_dbm": -91.0
+        },
+        {
+          "titik_id": "L3-003",
+          "ruang": null,
+          "x_px": 70,
+          "y_px": 201,
+          "rssi1_dbm": -85.0,
+          "rssi2_dbm": null
+        },
+        {
+          "titik_id": "L3-002",
+          "ruang": null,
+          "x_px": 163,
+          "y_px": 276,
+          "rssi1_dbm": -85.0,
+          "rssi2_dbm": -91.0
+        }
+      ]
+    },
+    "uji_aktif": {
+      "tersedia": true,
+      "jumlah_titik_pindah": 5,
+      "jumlah_titik_ping_hilang": 4,
+      "titik_dengan_perpindahan_ap": [
+        {
+          "titik_id": "L3-016",
+          "ruang": null,
+          "x_px": 1218,
+          "y_px": 694,
+          "n_pindah": 3,
+          "riwayat_asosiasi": "00:00:00:00:00:00 > b4:79:c8:ae:45:dc > fc:7f:f1:dd:53:30 > b4:79:c8:ae:45:dc",
+          "loss_saat_pindah_pct": 0.0,
+          "probe_gagal_saat_pindah_pct": 100.0,
+          "loss_titik_pct": 0.0,
+          "ping_hilang": true
+        },
+        {
+          "titik_id": "L3-014",
+          "ruang": null,
+          "x_px": 1030,
+          "y_px": 724,
+          "n_pindah": 1,
+          "riwayat_asosiasi": "3c:46:a1:bb:cd:92 > c0:c7:0a:98:38:b1",
+          "loss_saat_pindah_pct": null,
+          "probe_gagal_saat_pindah_pct": 100.0,
+          "loss_titik_pct": null,
+          "ping_hilang": true
+        },
+        {
+          "titik_id": "L3-009",
+          "ruang": null,
+          "x_px": 286,
+          "y_px": 539,
+          "n_pindah": 1,
+          "riwayat_asosiasi": "54:d7:e3:41:42:d0 > 54:d7:e3:45:4c:90",
+          "loss_saat_pindah_pct": 0.0,
+          "probe_gagal_saat_pindah_pct": 0.0,
+          "loss_titik_pct": 0.4,
+          "ping_hilang": false
+        },
+        {
+          "titik_id": "L3-006",
+          "ruang": null,
+          "x_px": 359,
+          "y_px": 353,
+          "n_pindah": 1,
+          "riwayat_asosiasi": "54:d7:e3:41:42:d0 > 54:d7:e3:42:97:90",
+          "loss_saat_pindah_pct": 34.0,
+          "probe_gagal_saat_pindah_pct": 0.0,
+          "loss_titik_pct": 31.0,
+          "ping_hilang": true
+        },
+        {
+          "titik_id": "L3-011",
+          "ruang": null,
+          "x_px": 357,
+          "y_px": 464,
+          "n_pindah": 1,
+          "riwayat_asosiasi": "54:d7:e3:41:42:d0 > 54:d7:e3:42:97:90",
+          "loss_saat_pindah_pct": null,
+          "probe_gagal_saat_pindah_pct": 100.0,
+          "loss_titik_pct": 42.0,
+          "ping_hilang": true
+        }
+      ],
+      "titik_asosiasi_bukan_ap_terkuat": [
+        {
+          "titik_id": "L3-030",
+          "radio_asosiasi": "54:d7:e3:45:51:20",
+          "radio_terkuat": "fc:7f:f1:dd:53:30"
+        },
+        {
+          "titik_id": "L3-016",
+          "radio_asosiasi": "b4:79:c8:ae:45:dc",
+          "radio_terkuat": "fc:7f:f1:dd:53:30"
+        },
+        {
+          "titik_id": "L3-015",
+          "radio_asosiasi": "3c:46:a1:bb:cd:92",
+          "radio_terkuat": "c0:c7:0a:98:38:b1"
+        },
+        {
+          "titik_id": "L3-009",
+          "radio_asosiasi": "54:d7:e3:41:42:d0",
+          "radio_terkuat": "e8:10:98:82:0b:40"
+        },
+        {
+          "titik_id": "L3-007",
+          "radio_asosiasi": "54:d7:e3:45:4c:90",
+          "radio_terkuat": "e8:10:98:82:0b:40"
+        },
+        {
+          "titik_id": "L3-008",
+          "radio_asosiasi": "54:d7:e3:45:4c:90",
+          "radio_terkuat": "c8:a6:08:8b:1e:a1"
+        },
+        {
+          "titik_id": "L3-006",
+          "radio_asosiasi": "54:d7:e3:42:97:90",
+          "radio_terkuat": "e8:10:98:82:0b:40"
+        },
+        {
+          "titik_id": "L3-011",
+          "radio_asosiasi": "54:d7:e3:42:97:90",
+          "radio_terkuat": "e8:10:98:82:05:a0"
+        },
+        {
+          "titik_id": "L3-004",
+          "radio_asosiasi": "54:d7:e3:41:42:d0",
+          "radio_terkuat": "ec:bd:1d:af:f6:7f"
+        },
+        {
+          "titik_id": "L3-002",
+          "radio_asosiasi": "54:d7:e3:41:42:d0",
+          "radio_terkuat": "c8:a6:08:8b:1e:a1"
+        }
+      ],
+      "catatan": "loss_saat_pindah = loss pada scan pertama setelah asosiasi berganti (scan ICMP; scan non-ICMP dihitung lewat probe_gagal)."
+    }
+  },
+  "catatan_batasan": [
+    "Posisi AP adalah weighted centroid dari maksimal 3 titik terkuat, bukan lokasi pasti.",
+    "Penyebab 'jauh dari AP', 'dugaan penghalang', dan 'bocor dari lantai lain' adalah inferensi dari posisi dan RSSI; keberadaan dinding tidak diukur langsung.",
+    "Tindakan per area berbasis penyebab; usulan koordinat AP baru tidak dihitung."
+  ]
+}
